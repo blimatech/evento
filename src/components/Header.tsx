@@ -1,7 +1,7 @@
 "use client";
 
 import Logo from "@/components/logo";
-import clsx from "clsx";
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -28,7 +28,7 @@ const Header = () => {
           {routes.map((route) => (
             <li
               key={route.path}
-              className={clsx(
+              className={cn(
                 "relative flex items-center transition hover:text-white",
                 {
                   "text-white": activePathName === route.path,
