@@ -1,6 +1,6 @@
 "use client";
 
-import Logo from "@/components/Logo";
+import Logo from "@/components/logo";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import Link from "next/link";
