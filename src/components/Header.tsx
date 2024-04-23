@@ -1,10 +1,10 @@
 "use client";
 
-import Logo from "@/components/logo";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Logo from "./Logo";
 
 const Header = () => {
   const routes = [
