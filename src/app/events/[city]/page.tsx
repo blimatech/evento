@@ -24,10 +24,6 @@ const EventsPage = async ({ params }: EventsPageProps) => {
       </H1>
 
       <EventList events={events} />
-
-      {events.map((event) => (
-        <section key={event.id}>{event.name}</section>
-      ))}
     </main>
   );
 };
