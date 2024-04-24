@@ -1,6 +1,7 @@
 import EventList from "@/components/eventList";
 import H1 from "@/components/h1";
-import { EventoEvent } from "@/lib/types";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 type EventsPageProps = {
   params: {
@@ -10,10 +11,6 @@ type EventsPageProps = {
 
 const EventsPage = async ({ params }: EventsPageProps) => {
   const city = params.city;
-  const response = await fetch(
-    `https://bytegrad.com/course-assets/projects/evento/api/events?city=${city}`,
-  );
-  const events: EventoEvent[] = await response.json();
 
   return (
     <main className="flex min-h-[110vh] flex-col items-center px-[20px] py-24">
@@ -23,7 +20,9 @@ const EventsPage = async ({ params }: EventsPageProps) => {
           `Events in ${city.charAt(0).toUpperCase() + city.slice(1)}`}
       </H1>
 
-      <EventList events={events} />
+      <Suspense fallback={<Loading />}>
+        <EventList city={city} />
+      </Suspense>
     </main>
   );
 };
