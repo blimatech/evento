@@ -1,6 +1,6 @@
 import { getEvents } from "@/lib/server-utils";
 import EventCard from "./event-card";
-import PaginationControls from "./PaginationControls";
+import PaginationControls from "./pagination-controls";
 
 type EventListProps = {
   city: string;

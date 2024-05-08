@@ -1,4 +1,4 @@
-import SkeletonCard from "@/components/Skeleton-card";
+import SkeletonCard from "@/components/skeleton-card";
 
 function Loading() {
   return (
