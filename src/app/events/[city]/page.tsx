@@ -1,5 +1,5 @@
 import EventList from "@/components/eventList";
-import H1 from "@/components/h1";
+import H1 from "../../../components/h1";
 import { capitalize } from "@/lib/utils";
 import { Metadata } from "next";
 import { Suspense } from "react";
